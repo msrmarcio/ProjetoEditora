@@ -1,0 +1,27 @@
+﻿@model Impacta.MOD.Usuario
+
+@{
+    ViewBag.Title = "Formulario";
+}
+
+@if (ViewBag.Mensagem != null)
+{
+    <h2>@ViewBag.Mensagem </h2>
+}
+
+<h2>Formulario de Autenticação </h2>
+
+@using (Html.BeginForm(" Entrar ", " Autenticador "))
+{
+    @Html.LabelFor(x => x.Username)
+    @Html.EditorFor(x => x.Username)
+
+    <br />
+
+    @Html.LabelFor(x => x.Password)
+    @Html.EditorFor(x => x.Password)
+
+    <br />
+
+    <input type = "submit" value = "Enviar" />
+}
