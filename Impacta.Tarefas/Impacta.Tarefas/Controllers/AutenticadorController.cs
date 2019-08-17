@@ -19,7 +19,7 @@ namespace Impacta.Tarefas.Controllers
 			if (usuario.Username != null && usuario.Password != null && 
 				usuario.Username.Equals("RealBooks") && usuario.Password.Equals("RealBooks"))
 			{
-				Session["Usuario"] = usuario;
+				Session["Usuario"] = usuario.Username;
 				return RedirectToAction("Index", "RealBooks");
 			}
 			else

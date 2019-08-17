@@ -23,10 +23,10 @@
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exercicios Apostila 2</a>
                     <div class="dropdown-menu">
                         @Html.ActionLink("Cap. 6 Laboratório 1 - Tarefas", "Index", "Tarefa",
-                                     new { }, new { @class = "dropdown-item" })
+                                                                        new { }, new { @class = "dropdown-item" })
                         <div class="dropdown-divider"></div>
                         @Html.ActionLink("Listar Tarefas", "ListarNovasTarefas", "Tarefa",
-                                    new { }, new { @class = "dropdown-item" })
+                                                                       new { }, new { @class = "dropdown-item" })
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -51,16 +51,21 @@
                     @Html.ActionLink("LOGIN", "Entrar", "Autenticador", new { }, new { @class = "nav-link dropdown-toggle" })
                 </li>
                 <li class="nav-item">
-                    @*@if (Session["Usuario"] != null)
+                    @if (Session["Usuario"] != null)
                     {
-                        <span>
-                            Olá @((Session["Usuario"]))!</span>
-                        @Html.ActionLink(" Logout ", " Sair ", " Autenticador ")
+                        @Html.ActionLink(Session["Usuario"].ToString(), "Entrar", "Autenticador", new { }, new { @class = "nav-link dropdown-toggle" })
                     }
-                    else
-                    {
-                        @Html.ActionLink("Login ", "Formulario", "Autenticador")
-                    }*@
+                    @*@if (Session["Usuario"] != null)
+                        {
+                            //Olá @((Session["Usuario"]))
+                            // @Html.ActionLink(Session["Usuario"], "Entrar", "Autenticador", new { }, new { @class = "nav-link dropdown-toggle" })
+
+                            @//Html.ActionLink("Logout", "Sair", "Autenticador")
+                        }
+                        else
+                        {
+                            @Html.ActionLink("LOGIN", "Entrar", "Autenticador", new { }, new { @class = "nav-link dropdown-toggle" })
+                        }*@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
